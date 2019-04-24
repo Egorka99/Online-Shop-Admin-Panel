@@ -2,42 +2,40 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Online-магазин - Заказы</title>
+	<title>Online-магазин - Поставщики</title>
 	<link rel="stylesheet" href="style.css"> 
 </head>
-<body>  
-  
+<body>   
+   
 	<?php include 'header.php'; ?>	   
  
     
 <section class="tabs">
   	<div class="tabs-container">  
-	  <div class="tabs-content">  
+	  <div class="tabs-content">   
 	    <div class="tabs-panel active" data-index="0">
-	     	<h2 style="display: inline;"><?php echo mysql_num_rows(mysql_query('select * from Заказ')); ?> Заказа-(ов)</h2>     
-        <button class="button additionModalBtn" href="#"><img class="add-img" src="img/plus.png" alt="">Добавить товар</button>
-        <button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить товар</button>    
+	     	<h2 style="display: inline;"><?php echo mysql_num_rows(mysql_query('select * from Заказ')); ?> Поставщика-(ов)</h2>     
+        <button class="button additionModalBtn" href="#"><img class="add-img" src="img/plus.png" alt="">Добавить поставщика</button>
+        <button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить поставщика</button>    
  
 <?php    
- 
-$ath = mysql_query("select * from Заказ;");
+   
+$ath = mysql_query("select * from Поставщик;");
 if($ath)
 { 
   // Определяем таблицу и заголовок   
   echo "<table border=1>";
-  echo "<tr><td>id</td><td>Дата заказа</td><td>Стоимость заказа</td><td>ID покупателя</td><td>Количество товаров</td></tr>"; 
+  echo "<tr><td>id</td><td>Название_поставщика</td><td>Email</td><td>Телефон</td></tr>"; 
   // Так как запрос возвращает несколько строк, применяем цикл 
   while($product = mysql_fetch_array($ath)) 
-  {  
-    $prod_count = mysql_num_rows(mysql_query("select * from Заказ_Товар Where id= ".$product['id'])); 
-    echo "<tr>  
+  {   
+    echo "<tr>   
     <td>".$product['id']."&nbsp;</td>   
-    <td>".$product['Дата_заказа']."&nbsp </td> 
-    <td>".$product['Стоимость_заказа']."&nbsp;</td>
-    <td>".$product['ID_покупателя']."&nbsp;</td>
-    <td>".$prod_count."&nbsp;</td> 
+    <td>".$product['Название_поставщика']."&nbsp </td> 
+    <td>".$product['Email']."&nbsp;</td> 
+    <td>".$product['Телефон']."&nbsp;</td>
     </tr>"; 
-  }    
+  }     
   echo "</table>"; 
 }
 else
@@ -45,24 +43,24 @@ else
   echo "<p><b>Error: ".mysql_error()."</b><p>"; 
   exit();
 }  
-?>   
-<h3>Товары в заказе</h3> 
+?>    
+<h3>Поставщики по категориям</h3> 
 <?php   
-  
-$ath = mysql_query("select * from Заказ_Товар;");
+   
+$ath = mysql_query("select * from Поставщик_категория;");
 if($ath)
 { 
   // Определяем таблицу и заголовок     
   echo "<table border=1>"; 
-  echo "<tr><td>id</td><td>ID товара</td></tr>"; 
+  echo "<tr><td>id_поставщика</td><td>id_категории</td></tr>"; 
   // Так как запрос возвращает несколько строк, применяем цикл 
   while($product = mysql_fetch_array($ath))
   { 
     echo "<tr> 
-    <td>".$product['id']."&nbsp;</td>  
-    <td>".$product['ID_товара']."&nbsp </td> 
-    </tr>"; 
-  }     
+    <td>".$product['id_поставщика']."&nbsp;</td>   
+    <td>".$product['id_категории']."&nbsp </td> 
+    </tr>";   
+  }      
   echo "</table>"; 
 }
 else
@@ -142,4 +140,4 @@ else
 	<script src="scripts.js"></script>
 
 </body> 
-</html>     
+</html>      

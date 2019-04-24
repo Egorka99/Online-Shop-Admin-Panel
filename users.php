@@ -6,23 +6,8 @@
 	<link rel="stylesheet" href="style.css"> 
 </head>
 <body>  
-  
-	<?php include 'connect.php'; ?>	  
  
-	<header class="header">
-		<div class="header-block"> 
-			<img src="img/catalog.png" alt="">
-			<a href="index.php">Каталог</a> 
-		</div>
-		<div class="header-block"> 
-			<img src="img/orders.png" alt="">   
-			<a href="orders.php">Заказы</a>   
-		</div>
-		<div class="header-block"> 
-			<img src="img/users.png" alt=""> 
-			<a href="users.php">Покупатели</a>
-		</div>  
-	</header> 
+<?php include 'header.php'; ?>	   
    
 <section class="tabs"> 
   	<div class="tabs-container"> 
@@ -52,13 +37,46 @@ if($ath)
     </tr>"; 
   }       
   echo "</table>"; 
-}
+} 
 else
 {
   echo "<p><b>Error: ".mysql_error()."</b><p>";
   exit();
 } 
 ?>    
+
+	     <h2 style="display: inline;">Банковские карты</h2>    
+		<button class="button additionModalBtn" href="#"><img class="add-img" src="img/plus.png" alt="">Добавить карту</button>
+     	<button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить карту</button>    
+
+<?php     
+   
+$ath = mysql_query("select * from Банковские_карты;"); 
+if($ath)  
+{   
+  // Определяем таблицу и заголовок      
+  echo "<table border=1>";  
+  echo "<tr><td>id</td><td>Номер_карты</td><td>Имя_владельца</td><td>Срок_истечения</td><td>Id_покупателя</td></tr>"; 
+  // Так как запрос возвращает несколько строк, применяем цикл 
+  while($product = mysql_fetch_array($ath))
+  { 
+    echo "<tr> 
+    <td>".$product['id']."&nbsp;</td>  
+    <td>".$product['Номер_карты']."&nbsp </td> 
+    <td>".$product['Имя_владельца']."&nbsp </td>  
+    <td>".$product['Срок_истечения']."&nbsp </td>    
+    <td>".$product['Id_покупателя']."&nbsp </td> 
+    </tr>"; 
+  }       
+  echo "</table>"; 
+} 
+else
+{
+  echo "<p><b>Error: ".mysql_error()."</b><p>";
+  exit();
+} 
+?>    
+
 	    </div>
 	  </div>  
 	</div>  

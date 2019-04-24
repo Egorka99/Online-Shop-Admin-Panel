@@ -6,23 +6,8 @@
 	<link rel="stylesheet" href="style.css"> 
 </head>
 <body>  
-  
-	<?php include 'connect.php'; ?>	  
 
-	<header class="header">
-		<div class="header-block">
-			<img src="img/catalog.png" alt="">
-			<a href="index.php">Каталог</a> 
-		</div>
-		<div class="header-block"> 
-			<img src="img/orders.png" alt=""> 
-			<a href="orders.php">Заказы</a>   
-		</div>
-		<div class="header-block"> 
-			<img src="img/users.png" alt=""> 
-			<a href="users.php">Покупатели</a>
-		</div>  
-	</header> 
+	<?php include 'header.php'; ?>	   
    
   	<section class="tabs">
   		<div class="tabs-container">
@@ -30,13 +15,16 @@
 		  <ul class="tabs">
 		    <li class="active">
 		      <a href="">Товары</a>
-		    </li>
+		    </li>					 
 		    <li>
 		      <a href="">Категории</a> 
 		    </li>
 		    <li>
 		      <a href="">Бренды</a>
 		    </li>   
+		    <li>
+		      <a href="">Производители</a>
+		    </li>  
 		  </ul>
     
 	  <div class="tabs-content">
@@ -139,7 +127,39 @@ else
 				  exit();
 				}	
 			?> 
-	    </div> 
+	    </div>  
+	    	    <div class="tabs-panel" data-index="3">      	
+	     	<div class="tabs-info">
+	     		<h2 style="display: inline;"><?php echo mysql_num_rows(mysql_query('select * from Бренды')); ?> производителя-(ей)</h2>
+	     		<button class="button additionModalBtn" href="#"><img class="add-img" src="img/plus.png" alt="">Добавить производителя</button>
+	     		<button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить производителя</button>    
+	     	</div>  
+	     	<?php         
+				$ath = mysql_query("select * from Производитель;");
+				if($ath)  
+				{   
+				  // Определяем таблицу и заголовок      
+				  echo "<table border=1>";    
+				  echo "<tr><td>id</td><td>Название_производителя</td><td>Количество товаров</td></tr>"; 
+				  // Так как запрос возвращает несколько строк, применяем цикл     
+				  while($product = mysql_fetch_array($ath))
+				  {    
+				  	$prod_count = mysql_num_rows(mysql_query("select * from Товар Where ID_Бренда= ".$product['id']));  
+				    echo "<tr>       
+				    <td>".$product['id']."&nbsp;</td>  
+				    <td>".$product['Название_производителя']."&nbsp </td> 
+				    <td>".$prod_count."&nbsp;</td>   
+				    </tr>";       
+				  }         
+				  echo "</table>";     
+				}
+				else 
+				{
+				  echo "<p><b>Error: ".mysql_error()."</b><p>";
+				  exit();
+				}	
+			?> 
+	    </div>  
 	  </div>  
 	</div>  
 
