@@ -1,0 +1,192 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} 
+
+ul {
+  list-style: none;
+}   
+ 
+body { 
+	background: rgb(194,194,194); 
+	font: normal 16px/1.5 Helvetica, sans-serif; 
+}  
+
+a {
+	color: #fff;
+}
+ 
+.button { 
+	margin-left: 10px;
+	font-size: 16px;
+	padding: 10px;
+	background-color: #fff;
+	border: 1px solid gray;
+	border-radius: 10px;
+	text-decoration: none;
+	color: gray;
+	cursor: pointer;
+}
+   
+.header {
+	display: flex;
+} 
+
+.header img {
+	margin: auto;
+} 
+
+.header-block  { 
+	padding: 20px;
+} 
+ 	 
+.header-block img , a {   
+	display: block; 
+	text-align: center;
+} 	 
+
+.add-img {
+	width: 18px;
+	height: 18px;
+}
+
+.tabs-container {
+  padding: 25px;
+}
+
+.tabs {
+  display: flex;
+}
+
+.tabs li:not(:last-child) {
+  margin-right: 7px;
+}
+ 
+.tabs li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  position: relative;
+  top: 4px;
+  padding: 10px 25px;
+  border-radius: 2px 2px 0 0;
+  background: #f6f6f6;
+  opacity: 0.7; 
+  transition: all 0.1s ease-in-out;
+}
+
+.tabs li.active a,
+.tabs li a:hover {
+  opacity: 1;
+  top: 0;
+}
+
+.tabs-content {
+  position: relative;
+  z-index: 2;
+  padding: 25px;
+  border-radius: 0 4px 4px 4px;
+  background: #f6f6f6;
+} 
+ 
+.tabs-panel {
+  display: none;
+}
+
+.tabs-info {
+  margin-bottom: 20px;
+}
+
+.tabs-panel.active {
+  display: block;
+}
+
+.tabs-panel p + div {
+  margin-top: 15px;
+}
+
+
+.orders {
+  position: relative;
+  z-index: 2; 
+  padding: 25px; 
+  border-radius: 0 4px 4px 4px;
+  background: #f6f6f6;
+}
+ 
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.modal-content {
+    position: relative;
+    background-color: #fff; 
+    margin: auto;
+    padding: 0;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+.modal-header {
+    padding: 2px 16px; 
+    background-color: #d53131;
+    color: white;
+}
+
+.modal-body {
+	padding: 2px 16px;
+}
+ 
+.modal-body label,
+.modal-body button{
+	display: block; 
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #9C27B0;
+    color: white;
+}

@@ -1,0 +1,616 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"st",
+				"style"
+			],
+			[
+				"o",
+				"orders.png\tw:48 h:48"
+			],
+			[
+				"the_",
+				"the_field"
+			],
+			[
+				"get_",
+				"get_header\t(contacts.php)"
+			],
+			[
+				"aut",
+				"author_column"
+			],
+			[
+				"ge",
+				"genre"
+			],
+			[
+				"po",
+				"portfolio"
+			],
+			[
+				"the_c",
+				"the_content"
+			],
+			[
+				"get",
+				"get_header\t(portfolio.php)"
+			],
+			[
+				"the",
+				"the_permalink\t(single.php)"
+			],
+			[
+				"the_post",
+				"the_post_thumbnail\t(single.php)"
+			],
+			[
+				"add",
+				"add_filter"
+			],
+			[
+				"the_th",
+				"the_post_thumbnail"
+			],
+			[
+				"the_ca",
+				"the_category"
+			],
+			[
+				"de",
+				"default.css"
+			],
+			[
+				"wp_en",
+				"wp_enqueue_style"
+			],
+			[
+				"le",
+				"linear-gradient"
+			],
+			[
+				"line",
+				"linear-gradient"
+			],
+			[
+				"H",
+				"Helvetica"
+			],
+			[
+				"top",
+				"top-nav_menu"
+			],
+			[
+				"toggle",
+				"toggleClass\t.toggleClass()"
+			],
+			[
+				"fade",
+				"fadeIn\t.fadeIn()"
+			],
+			[
+				"d",
+				"display\t(index.html)"
+			],
+			[
+				"key",
+				"keypress\t.keypress()"
+			],
+			[
+				"re",
+				"reset\t.reset()"
+			],
+			[
+				"C",
+				"click"
+			],
+			[
+				"t",
+				"type\tAttr"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"par",
+				"parentDisable"
+			],
+			[
+				"ex",
+				"exportStr"
+			],
+			[
+				"water",
+				"waterAmount"
+			],
+			[
+				"set",
+				"setFirstName"
+			],
+			[
+				"inner",
+				"innerHeight\t.innerHeight()"
+			],
+			[
+				"plaer",
+				"player"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"co",
+				"console.log"
+			],
+			[
+				"Bj",
+				"BJList"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"sala",
+				"salaries"
+			],
+			[
+				"salaries",
+				"salariesSum"
+			],
+			[
+				"is",
+				"isNumeric"
+			],
+			[
+				"sho",
+				"showPrimes"
+			],
+			[
+				"ro",
+				"roboto-etc"
+			],
+			[
+				"documents",
+				"documents-title"
+			],
+			[
+				"babysmart",
+				"babysmart-block__subtitle"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"tr",
+				"transition\tproperty"
+			],
+			[
+				"class",
+				"classlist"
+			],
+			[
+				"toggl",
+				"toggleClass\t.toggleClass()"
+			],
+			[
+				"acc",
+				"accordion\t(index.html)"
+			],
+			[
+				"tex",
+				"text-align\tproperty"
+			],
+			[
+				"li",
+				"libs/"
+			],
+			[
+				"slide",
+				"slideToggle\t.slideToggle()"
+			],
+			[
+				"ba",
+				"babysmart-description\t(index.html)"
+			],
+			[
+				"type",
+				"type=tel\t(index.html)"
+			],
+			[
+				"title",
+				"title-font"
+			],
+			[
+				"j",
+				"justify-content-between\t(index.html)"
+			],
+			[
+				"ali",
+				"align-items-center"
+			],
+			[
+				"Roboto",
+				"RobotoEtc\t(_fonts.sass)"
+			],
+			[
+				"tit",
+				"title-font"
+			],
+			[
+				"final",
+				"final_price"
+			],
+			[
+				"data",
+				"data-print-file"
+			],
+			[
+				"option",
+				"option:selected"
+			],
+			[
+				"select",
+				"select#card_color"
+			],
+			[
+				"paper",
+				"paper_ratio"
+			],
+			[
+				"color",
+				"color_format"
+			],
+			[
+				"card",
+				"card_color"
+			],
+			[
+				"conta",
+				"contacts-phone"
+			],
+			[
+				"do_",
+				"do_shortcode"
+			],
+			[
+				"a",
+				"assets"
+			],
+			[
+				"wp",
+				"wp_enqueue_script"
+			],
+			[
+				"ass",
+				"assets/"
+			],
+			[
+				"get_s",
+				"get_stylesheet"
+			],
+			[
+				"wp_enqueue_s",
+				"wp_enqueue_style"
+			],
+			[
+				"get_template_d",
+				"get_template_directory_uri"
+			],
+			[
+				"get_te",
+				"get_template"
+			],
+			[
+				"add_",
+				"add_action"
+			],
+			[
+				"str",
+				"String"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: toggle"
+			],
+			[
+				"word",
+				"Snippet: WordPress File Header"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Desktop/Sites/Формы/form/php/vkform.php",
+		"/D/Desktop/учеба/VCoinX/index.js",
+		"/D/Desktop/учеба/VCoinX/helpers.js",
+		"/D/Desktop/учеба/VCoinX/config.js",
+		"/D/Desktop/учеба/VCoinX/README.md",
+		"/D/Desktop/Sites/Сайты/XmanBank/app/sass/main.sass",
+		"/D/Desktop/Sites/Server/OSPanel/domains/artemov/connect.php",
+		"/D/Desktop/Sites/yurij-pliskovskij/index.html",
+		"/D/Desktop/Sites/ВР 12/Good Cardboard/app/js/common.js",
+		"/D/Desktop/Sites/ВР 12/Good Cardboard/app/js/scripts.min.js",
+		"/D/Desktop/Sites/Сайты/XmanBank/app/index.html",
+		"/D/Desktop/Sites/Server/OSPanel/domains/artemov/index.html",
+		"/D/Desktop/Sites/Сайты/XmanBank/app/css/main.min.css",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/functions.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/sidebar.php",
+		"/D/Desktop/Sparrow101/searchform.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/sidebar-about.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/portfolio.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/contacts.php",
+		"/D/Desktop/Sparrow101/single.html",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/about.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/single-portfolio.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/category.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/single.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/blog.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/footer.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/index.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/header.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/header-index.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/taxonomy.php",
+		"/D/Desktop/Sparrow101/portfolio.html",
+		"/D/Desktop/Sparrow101/portfolio-index.html",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/assets/css/layout.css",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/search.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/page.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/arkada/wp-content/themes/arkada-theme/functions.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/404.php",
+		"/D/Desktop/Sparrow101/index.html",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/sparrow/style.css",
+		"/D/Desktop/Sites/Server/OSPanel/domains/course/wp-content/themes/twentysixteen/style.css",
+		"/D/Desktop/Sites/Сайты/egorka99.github.io/index.html",
+		"/D/Desktop/Sites/Сайты/XmanBank/app/sass/_media.sass",
+		"/D/Desktop/Sites/Server/OSPanel/domains/github portfolio/portfolio/index.html",
+		"/D/Desktop/Sites/Сайты/XmanBank/app/js/common.js",
+		"/C/Users/Egor/Documents/FIFA 14/Career 20190225105318#Dno",
+		"/D/Desktop/Sites/Сайты/XmanBank/app/libs/owlcarousel/assets/owl.theme.default.min.css",
+		"/D/Desktop/Sites/Сайты/Logotypes/app/sass/main.sass",
+		"/D/Desktop/Sites/Сайты/Logotypes/app/index.html",
+		"/D/Desktop/Sites/Сайты/XmanBank/app/sass/_fonts.sass",
+		"/D/Desktop/Sites/Сайты/XmanBank/app/libs/owlcarousel/assets/owl.carousel.css",
+		"/D/Desktop/Sites/Сайты/XmanBank/app/sass/_vars.sass",
+		"/D/Desktop/JAVASCRIPT LEARNING BITCH/What to do JS/style.css",
+		"/D/Desktop/JAVASCRIPT LEARNING BITCH/What to do JS/library.js",
+		"/D/Desktop/JAVASCRIPT LEARNING BITCH/What to do JS/index.html",
+		"/D/Desktop/JAVASCRIPT LEARNING BITCH/What to do JS/preloader.css",
+		"/D/Desktop/Sites/Сайты/test2/app/sass/main.sass",
+		"/D/Desktop/Sites/Сайты/test2/app/sass/_media.sass",
+		"/D/Desktop/Sites/Формы/form/js/form-scripts.js",
+		"/D/Desktop/Sites/Формы/form/index.html",
+		"/D/Desktop/Sites/Сайты/test2/app/index.html",
+		"/D/Desktop/Sites/Сайты/test2/app/js/common.js",
+		"/D/Desktop/JAVASCRIPT LEARNING BITCH/What to do JS/animate.css",
+		"/D/Desktop/Sites/Сайты/test2/app/cms.html",
+		"/D/Desktop/Sites/Сайты/test2/app/layer.html",
+		"/D/Desktop/Sites/Сайты/test2/app/work.html",
+		"/D/Desktop/JAVASCRIPT LEARNING BITCH/What to do JS/wow.js",
+		"/D/Desktop/JAVASCRIPT LEARNING BITCH/vk api/vk.js",
+		"/D/Desktop/Sites/Формы/form/php/tgform.php",
+		"/D/Desktop/Sites/Сайты/test2/app/php/modal-vkform.php",
+		"/D/Desktop/Sites/Сайты/test2/app/js/form-scripts.js",
+		"/D/Desktop/Sites/Сайты/test2/app/js/modalform-script.js",
+		"/D/Desktop/Sites/Сайты/test2/app/php/vkform.php",
+		"/D/Desktop/Sites/Сайты/test2/app/php/modalform-process.php",
+		"/D/Desktop/Sites/Формы/vkform/php/vkform.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/portfolio/sass/main.sass",
+		"/D/Desktop/Sites/Server/OSPanel/domains/portfolio/js/form-scripts.js",
+		"/D/Desktop/Sites/Server/OSPanel/domains/portfolio/index.html",
+		"/D/Desktop/Sites/Server/OSPanel/domains/blog/wp-content/themes/bhari/assets/css/min/style.min.css",
+		"/D/Desktop/Sites/Server/OSPanel/domains/blog/wp-content/themes/bhari/template-parts/content.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/blog/wp-content/themes/bhari/single.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/blog/wp-includes/meta.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/blog/wp-content/themes/bhari/header.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/blog/wp-content/themes/bhari/index.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/blog/wp-content/themes/bhari/footer.php",
+		"/C/Users/Egor/single.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/blog/wp-content/themes/bhari/searchform.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/blog/wp-content/themes/bhari/404.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/blog/wp-content/themes/bhari/archive.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/blog/wp-content/themes/bhari/page.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/blog/wp-content/themes/bhari/search.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/blog/blog.sql",
+		"/D/Desktop/Sites/Формы/form/get-token.php",
+		"/D/Desktop/Sites/Формы/vkform/js/form-scripts.js",
+		"/D/Desktop/Sites/Формы/vkform/get token.php",
+		"/D/Desktop/Sites/Формы/form/get token.php",
+		"/D/Desktop/bhari/functions.php",
+		"/D/Desktop/bhari/header.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/blog/wp-content/themes/bhari/functions.php",
+		"/D/Desktop/bhari/assets/css/min/style.min.css",
+		"/D/Desktop/bhari/index.php",
+		"/D/Desktop/Sites/Server/OSPanel/domains/blog/wp-includes/general-template.php",
+		"/D/Programms/server/OSPanel/domains/blog/wp-content/themes/bhari/search.php",
+		"/D/Programms/server/OSPanel/domains/blog/wp-content/themes/bhari/archive.php",
+		"/D/Programms/server/OSPanel/domains/blog/wp-content/themes/bhari/searchform.php",
+		"/D/Programms/server/OSPanel/domains/blog/wp-content/themes/bhari/assets/css/min/style.min.css",
+		"/D/Programms/server/OSPanel/domains/blog/wp-includes/widgets.php",
+		"/D/Desktop/sidebar.php",
+		"/D/Programms/server/OSPanel/domains/blog/wp-content/themes/bhari/sidebar.php",
+		"/D/Programms/server/OSPanel/domains/blog/wp-content/themes/bhari/inc/template-tags.php",
+		"/D/Desktop/JAVASCRIPT LEARNING BITCH/vk api/index.html",
+		"/D/Desktop/JAVASCRIPT LEARNING BITCH/test.js",
+		"/D/Desktop/JAVASCRIPT LEARNING BITCH/index.html",
+		"/D/Programms/server/OSPanel/domains/blog/wp-content/themes/bhari/single.php",
+		"/D/Programms/server/OSPanel/domains/blog/wp-content/themes/bhari/functions.php",
+		"/D/Programms/server/OSPanel/domains/blog/wp-content/themes/bhari/header.php",
+		"/D/Desktop/Sites/Сайты/test2/app/css/main.min.css",
+		"/D/Programms/server/OSPanel/domains/blog/wp-content/themes/bhari/style.css",
+		"/C/Users/Egor/AppData/Local/Temp/Rar$DIa0.084/style.min.css",
+		"/C/Users/Egor/AppData/Local/Temp/Rar$DIa0.216/style.min.css",
+		"/D/Programms/server/OSPanel/domains/blog/wp-content/themes/bhari/template-parts/content.php",
+		"/D/Programms/server/OSPanel/domains/blog/wp-content/themes/bhari/page.php",
+		"/D/Programms/server/OSPanel/domains/blog/wp-content/themes/bhari/index.php",
+		"/D/Desktop/JAVASCRIPT LEARNING BITCH/snake js/index.html",
+		"/D/Desktop/JAVASCRIPT LEARNING BITCH/snake js/snake.js",
+		"/D/Desktop/JAVASCRIPT LEARNING BITCH/snake js/index..html",
+		"/D/Desktop/Perfect-Information Blackjack/egorka99.github.io/css/style.css",
+		"/D/Desktop/Perfect-Information Blackjack/egorka99.github.io/js/optimal.js",
+		"/D/Desktop/Perfect-Information Blackjack/egorka99.github.io/index.html"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 161.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 76.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "orders.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 246.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
