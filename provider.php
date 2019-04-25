@@ -52,11 +52,12 @@ if($ath)
 { 
   // Определяем таблицу и заголовок     
   echo "<table border=1>"; 
-  echo "<tr><td>id_поставщика</td><td>id_категории</td></tr>"; 
+  echo "<tr><td>id</td><td>id_поставщика</td><td>id_категории</td></tr>"; 
   // Так как запрос возвращает несколько строк, применяем цикл 
   while($product = mysql_fetch_array($ath))
   { 
-    echo "<tr> 
+    echo "<tr>  
+    <td>".$product['id']."&nbsp;</td>   
     <td>".$product['id_поставщика']."&nbsp;</td>   
     <td>".$product['id_категории']."&nbsp </td> 
     </tr>";   
@@ -87,12 +88,16 @@ else
       <div class="modal-body">      
         <label for="table">Выбрать таблицу:</label>
         <select id="add_table">    
-        <option value="Товар">Товар</option>  
-        <option value="Категория">Категория</option>    
-        <option value="Бренды">Бренды</option>   
-        <option value="Заказ">Заказ</option>  
-        <option value="Заказ_Товар">Заказ_Товар</option>  
-        <option value="Покупатель">Покупатель</option>  
+      <option value="Товар">Товар</option> 
+      <option value="Категория">Категория</option>    
+      <option value="Бренды">Бренды</option>   
+      <option value="Заказ">Заказ</option>  
+      <option value="Заказ_Товар">Заказ_Товар</option>  
+      <option value="Покупатель">Покупатель</option>  
+      <option value="Производитель">Производитель</option>   
+      <option value="Поставщик">Поставщик</option>  
+            <option value="Банковские_карты">Банковские_карты</option>  
+      <option value="Поставщик_категория">Поставщик_категория</option>  
       </select>    
       <button id="add_button" class="button">Показать таблицу</button>
       </div>  
@@ -116,25 +121,21 @@ else
       <option value="Заказ">Заказ</option>  
       <option value="Заказ_Товар">Заказ_Товар</option>  
       <option value="Покупатель">Покупатель</option>  
+      <option value="Производитель">Производитель</option>   
+      <option value="Поставщик">Поставщик</option>  
+            <option value="Банковские_карты">Банковские_карты</option>  
+      <option value="Поставщик_категория">Поставщик_категория</option>  
     </select>   
 
       <label for="del_id">ID удаляемой записи</label>
       <input id="del_id" type="text">
       <button id="del_button" class="button">Удалить</button>
     </div>
-  </div>
+  </div> 
   
 </div>   
-	
-<?php if(mysql_close($dbcnx)) // разрываем соединение
-	{
-	  echo("Соединение с базой данных прекращено");
-	}
-	else
-	{
-	  echo("Не удалось завершить соединение");
-	}  
-?>
+
+  <?php include 'close.php'; ?> 
    
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="scripts.js"></script>

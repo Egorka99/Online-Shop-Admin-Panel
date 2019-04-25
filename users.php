@@ -19,25 +19,27 @@
   
 <?php     
    
-$ath = mysql_query("select * from Покупатель;"); 
+$ath = mysql_query("select * from Покупатель;");  
 if($ath) 
 { 
   // Определяем таблицу и заголовок      
   echo "<table border=1>";  
-  echo "<tr><td>id</td><td>Логин</td><td>Пароль</td><td>E-mail</td><td>ФИО</td></tr>"; 
+  echo "<tr><td>id</td><td>Логин</td><td>Пароль</td><td>E-mail</td><td>Фамилия</td><td>Имя</td><td>Отчество</td></tr>"; 
   // Так как запрос возвращает несколько строк, применяем цикл 
   while($product = mysql_fetch_array($ath))
   { 
-    echo "<tr> 
+    echo "<tr>  
     <td>".$product['id']."&nbsp;</td>  
     <td>".$product['Логин']."&nbsp </td> 
     <td>".$product['Пароль']."&nbsp </td>  
     <td>".$product['EMail']."&nbsp </td>   
-    <td>".$product['ФИО']."&nbsp </td> 
-    </tr>"; 
-  }       
-  echo "</table>"; 
-} 
+    <td>".$product['Фамилия']."&nbsp </td>  
+    <td>".$product['Имя']."&nbsp </td> 
+    <td>".$product['Отчество']."&nbsp </td> 
+    </tr>";  
+  }          
+  echo "</table>";  
+}  
 else
 {
   echo "<p><b>Error: ".mysql_error()."</b><p>";
@@ -90,16 +92,20 @@ else
 	    <div style="background-color: #1da513;" class="modal-header">   
 	      <span class="close">&times;</span> 
 	      <h2>Добавление записи</h2> 
-	    </div>       
+	    </div>        
 	    <div class="modal-body">      
 	    	<label for="table">Выбрать таблицу:</label>
 	    	<select id="add_table">    
-			  <option value="Товар">Товар</option>  
-			  <option value="Категория">Категория</option>    
-			  <option value="Бренды">Бренды</option>   
-			  <option value="Заказ">Заказ</option>  
-			  <option value="Заказ_Товар">Заказ_Товар</option>  
-			  <option value="Покупатель">Покупатель</option>  
+      <option value="Товар">Товар</option> 
+      <option value="Категория">Категория</option>    
+      <option value="Бренды">Бренды</option>   
+      <option value="Заказ">Заказ</option>  
+      <option value="Заказ_Товар">Заказ_Товар</option>  
+      <option value="Покупатель">Покупатель</option>  
+      <option value="Производитель">Производитель</option>   
+      <option value="Поставщик">Поставщик</option>  
+      <option value="Банковские_карты">Банковские_карты</option>  
+      <option value="Поставщик_категория">Поставщик_категория</option>  
 			</select>    
 			<button id="add_button" class="button">Показать таблицу</button>
 	    </div>  
@@ -112,17 +118,21 @@ else
   <div class="modal-content"> 
     <div class="modal-header"> 
       <span class="close">&times;</span>  
-      <h2>Удаление записи</h2>  
+      <h2>Удаление записи</h2>   
     </div>    
     <div class="modal-body">     
-    	<label for="table">Выбрать таблицу:</label>
+    	<label for="table">Выбрать таблицу:</label> 
     	<select id="table">     
-		  <option value="Товар">Товар</option> 
-		  <option value="Категория">Категория</option>    
-		  <option value="Бренды">Бренды</option>   
-		  <option value="Заказ">Заказ</option>  
-		  <option value="Заказ_Товар">Заказ_Товар</option>  
-		  <option value="Покупатель">Покупатель</option>  
+      <option value="Товар">Товар</option> 
+      <option value="Категория">Категория</option>    
+      <option value="Бренды">Бренды</option>   
+      <option value="Заказ">Заказ</option>  
+      <option value="Заказ_Товар">Заказ_Товар</option>  
+      <option value="Покупатель">Покупатель</option>  
+      <option value="Производитель">Производитель</option>   
+      <option value="Поставщик">Поставщик</option>  
+      <option value="Банковские_карты">Банковские_карты</option>  
+      <option value="Поставщик_категория">Поставщик_категория</option>  
 		</select>   
 
      	<label for="del_id">ID удаляемой записи</label>
@@ -133,15 +143,7 @@ else
   
 </div>   
 	
-<?php if(mysql_close($dbcnx)) // разрываем соединение
-	{
-	  echo("Соединение с базой данных прекращено");
-	}
-	else  
-	{
-	  echo("Не удалось завершить соединение");
-	}  
-?>
+	<?php include 'close.php'; ?>
    
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="scripts.js"></script>

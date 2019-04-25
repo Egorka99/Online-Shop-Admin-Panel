@@ -25,9 +25,9 @@ if($ath)
 { 
   // Определяем таблицу и заголовок   
   echo "<table border=1>";
-  echo "<tr><td>id</td><td>Дата заказа</td><td>Стоимость заказа</td><td>ID покупателя</td><td>Количество товаров</td></tr>"; 
+  echo "<tr><td>id</td><td>Дата заказа</td><td>Стоимость заказа</td><td>ID покупателя</td><td>Количество товаров</td><td>Время заказа</td></tr>"; 
   // Так как запрос возвращает несколько строк, применяем цикл 
-  while($product = mysql_fetch_array($ath)) 
+  while($product = mysql_fetch_array($ath))  
   {  
     $prod_count = mysql_num_rows(mysql_query("select * from Заказ_Товар Where id= ".$product['id'])); 
     echo "<tr>  
@@ -35,10 +35,11 @@ if($ath)
     <td>".$product['Дата_заказа']."&nbsp </td> 
     <td>".$product['Стоимость_заказа']."&nbsp;</td>
     <td>".$product['ID_покупателя']."&nbsp;</td>
-    <td>".$prod_count."&nbsp;</td> 
+    <td>".$prod_count."&nbsp;</td>  
+    <td>".$product['Время_заказа']."&nbsp;</td> 
     </tr>"; 
   }    
-  echo "</table>"; 
+  echo "</table>";  
 }
 else
 {
@@ -89,12 +90,16 @@ else
       <div class="modal-body">      
         <label for="table">Выбрать таблицу:</label>
         <select id="add_table">    
-        <option value="Товар">Товар</option>  
-        <option value="Категория">Категория</option>    
-        <option value="Бренды">Бренды</option>   
-        <option value="Заказ">Заказ</option>  
-        <option value="Заказ_Товар">Заказ_Товар</option>  
-        <option value="Покупатель">Покупатель</option>  
+      <option value="Товар">Товар</option> 
+      <option value="Категория">Категория</option>    
+      <option value="Бренды">Бренды</option>   
+      <option value="Заказ">Заказ</option>   
+      <option value="Заказ_Товар">Заказ_Товар</option>  
+      <option value="Покупатель">Покупатель</option>  
+      <option value="Производитель">Производитель</option>   
+      <option value="Поставщик">Поставщик</option>  
+      <option value="Банковские_карты">Банковские_карты</option>  
+      <option value="Поставщик_категория">Поставщик_категория</option>  
       </select>    
       <button id="add_button" class="button">Показать таблицу</button>
       </div>  
@@ -118,6 +123,10 @@ else
       <option value="Заказ">Заказ</option>  
       <option value="Заказ_Товар">Заказ_Товар</option>  
       <option value="Покупатель">Покупатель</option>  
+      <option value="Производитель">Производитель</option>   
+      <option value="Поставщик">Поставщик</option>  
+      <option value="Банковские_карты">Банковские_карты</option>  
+      <option value="Поставщик_категория">Поставщик_категория</option>  
     </select>   
 
       <label for="del_id">ID удаляемой записи</label>
@@ -127,16 +136,8 @@ else
   </div>
   
 </div>   
-	
-<?php if(mysql_close($dbcnx)) // разрываем соединение
-	{
-	  echo("Соединение с базой данных прекращено");
-	}
-	else
-	{
-	  echo("Не удалось завершить соединение");
-	}  
-?>
+	 
+	<?php include 'close.php'; ?>
    
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="scripts.js"></script>

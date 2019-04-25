@@ -130,26 +130,26 @@ else
 	    </div>  
 	    	    <div class="tabs-panel" data-index="3">      	
 	     	<div class="tabs-info">
-	     		<h2 style="display: inline;"><?php echo mysql_num_rows(mysql_query('select * from Бренды')); ?> производителя-(ей)</h2>
+	     		<h2 style="display: inline;"><?php echo mysql_num_rows(mysql_query('select * from Производитель')); ?> производителя-(ей)</h2>
 	     		<button class="button additionModalBtn" href="#"><img class="add-img" src="img/plus.png" alt="">Добавить производителя</button>
 	     		<button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить производителя</button>    
 	     	</div>  
-	     	<?php         
+	     	<?php          
 				$ath = mysql_query("select * from Производитель;");
 				if($ath)  
-				{   
+				{    
 				  // Определяем таблицу и заголовок      
 				  echo "<table border=1>";    
 				  echo "<tr><td>id</td><td>Название_производителя</td><td>Количество товаров</td></tr>"; 
 				  // Так как запрос возвращает несколько строк, применяем цикл     
-				  while($product = mysql_fetch_array($ath))
+				  while($product = mysql_fetch_array($ath)) 
 				  {    
-				  	$prod_count = mysql_num_rows(mysql_query("select * from Товар Where ID_Бренда= ".$product['id']));  
+				  	$prod_count = mysql_num_rows(mysql_query("select * from Производитель Where id= ".$product['id']));  
 				    echo "<tr>       
 				    <td>".$product['id']."&nbsp;</td>  
 				    <td>".$product['Название_производителя']."&nbsp </td> 
 				    <td>".$prod_count."&nbsp;</td>   
-				    </tr>";       
+				    </tr>";        
 				  }         
 				  echo "</table>";     
 				}
@@ -176,12 +176,16 @@ else
 	    <div class="modal-body">      
 	    	<label for="table">Выбрать таблицу:</label>
 	    	<select id="add_table">    
-			  <option value="Товар">Товар</option>  
-			  <option value="Категория">Категория</option>    
-			  <option value="Бренды">Бренды</option>   
-			  <option value="Заказ">Заказ</option>  
-			  <option value="Заказ_Товар">Заказ_Товар</option>  
-			  <option value="Покупатель">Покупатель</option>  
+      <option value="Товар">Товар</option> 
+      <option value="Категория">Категория</option>    
+      <option value="Бренды">Бренды</option>   
+      <option value="Заказ">Заказ</option>  
+      <option value="Заказ_Товар">Заказ_Товар</option>  
+      <option value="Покупатель">Покупатель</option>  
+      <option value="Производитель">Производитель</option>   
+      <option value="Поставщик">Поставщик</option>  
+            <option value="Банковские_карты">Банковские_карты</option>  
+      <option value="Поставщик_категория">Поставщик_категория</option>  
 			</select>    
 			<button id="add_button" class="button">Показать таблицу</button>
 	    </div>  
@@ -199,12 +203,16 @@ else
     <div class="modal-body">     
     	<label for="table">Выбрать таблицу:</label>
     	<select id="table">    
-		  <option value="Товар">Товар</option> 
-		  <option value="Категория">Категория</option>    
-		  <option value="Бренды">Бренды</option>   
-		  <option value="Заказ">Заказ</option>  
-		  <option value="Заказ_Товар">Заказ_Товар</option>  
-		  <option value="Покупатель">Покупатель</option>  
+      <option value="Товар">Товар</option> 
+      <option value="Категория">Категория</option>    
+      <option value="Бренды">Бренды</option>   
+      <option value="Заказ">Заказ</option>  
+      <option value="Заказ_Товар">Заказ_Товар</option>  
+      <option value="Покупатель">Покупатель</option>  
+      <option value="Производитель">Производитель</option>   
+      <option value="Поставщик">Поставщик</option>  
+            <option value="Банковские_карты">Банковские_карты</option>  
+      <option value="Поставщик_категория">Поставщик_категория</option>  
 		</select>   
 
      	<label for="del_id">ID удаляемой записи</label>
@@ -215,15 +223,7 @@ else
   
 </div>  
 	 
-<?php if(mysql_close($dbcnx)) // разрываем соединение
-	{
-	  echo("Соединение с базой данных прекращено");
-	}
-	else
-	{
-	  echo("Не удалось завершить соединение");
-	}  
-?>
+	<?php include 'close.php'; ?> 
    
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="scripts.js"></script>
