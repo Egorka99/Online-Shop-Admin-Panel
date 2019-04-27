@@ -95,8 +95,9 @@ a {
 }
 
 .tabs-info {
+  margin-top: 20px;
   margin-bottom: 20px;
-}
+} 
 
 .tabs-panel.active {
   display: block;
@@ -177,11 +178,15 @@ a {
 }
 
 .modal-body {
-	padding: 2px 16px;
+	padding: 2px 16px; 
+}
+ 
+.modal-body * {
+  margin-bottom: 20px;
 }
  
 .modal-body label,
-.modal-body button{
+.modal-body button{ 
 	display: block; 
 }
 

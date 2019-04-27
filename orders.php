@@ -6,19 +6,21 @@
 	<link rel="stylesheet" href="style.css"> 
 </head>
 <body>  
-  
+   
 	<?php include 'header.php'; ?>	   
  
     
 <section class="tabs">
   	<div class="tabs-container">  
-	  <div class="tabs-content">  
+	  <div class="tabs-content">   
 	    <div class="tabs-panel active" data-index="0">
-	     	<h2 style="display: inline;"><?php echo mysql_num_rows(mysql_query('select * from Заказ')); ?> Заказа-(ов)</h2>     
-        <button class="button additionModalBtn" href="#"><img class="add-img" src="img/plus.png" alt="">Добавить товар</button>
-        <button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить товар</button>    
+	    <div class="tabs-info">
+	    	<h2 style="display: inline;"><?php echo mysql_num_rows(mysql_query('select * from Заказ')); ?> Заказа-(ов)</h2>     
+	    	<button class="button additionModalBtn" href="#"><img class="add-img" src="img/plus.png" alt="">Добавить заказ</button>
+	        <button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить заказ</button>    
+		</div>
  
-<?php    
+<?php     
  
 $ath = mysql_query("select * from Заказ;");
 if($ath)
@@ -29,11 +31,11 @@ if($ath)
   // Так как запрос возвращает несколько строк, применяем цикл 
   while($product = mysql_fetch_array($ath))  
   {  
-    $prod_count = mysql_num_rows(mysql_query("select * from Заказ_Товар Where id= ".$product['id'])); 
+    $prod_count = mysql_num_rows(mysql_query("select * from Заказ_Товар Where ID_Заказа= ".$product['id'])); 
     echo "<tr>  
     <td>".$product['id']."&nbsp;</td>   
-    <td>".$product['Дата_заказа']."&nbsp </td> 
-    <td>".$product['Стоимость_заказа']."&nbsp;</td>
+    <td>".$product['Дата_заказа']."&nbsp </td>  
+    <td>".$product['Стоимость_заказа']."&nbsp;</td> 
     <td>".$product['ID_покупателя']."&nbsp;</td>
     <td>".$prod_count."&nbsp;</td>  
     <td>".$product['Время_заказа']."&nbsp;</td> 
@@ -47,21 +49,22 @@ else
   exit();
 }  
 ?>   
-<h3>Товары в заказе</h3> 
-<?php   
+<div class="tabs-info"><h3>Товары в заказе</h3> </div>
+<?php    
   
 $ath = mysql_query("select * from Заказ_Товар;");
 if($ath)
 { 
   // Определяем таблицу и заголовок     
-  echo "<table border=1>"; 
-  echo "<tr><td>id</td><td>ID товара</td></tr>"; 
+  echo "<table border=1>";  
+  echo "<tr><td>id</td><td>ID_Заказа</td><td>ID_Товара</td></tr>"; 
   // Так как запрос возвращает несколько строк, применяем цикл 
   while($product = mysql_fetch_array($ath))
   { 
     echo "<tr> 
     <td>".$product['id']."&nbsp;</td>  
-    <td>".$product['ID_товара']."&nbsp </td> 
+    <td>".$product['ID_Заказа']."&nbsp </td> 
+    <td>".$product['ID_Товара']."&nbsp </td> 
     </tr>"; 
   }     
   echo "</table>"; 
@@ -101,7 +104,7 @@ else
       <option value="Банковские_карты">Банковские_карты</option>  
       <option value="Поставщик_категория">Поставщик_категория</option>  
       </select>    
-      <button id="add_button" class="button">Показать таблицу</button>
+      <button id="add_button">Показать таблицу</button>
       </div>  
     </div>
      
@@ -129,9 +132,9 @@ else
       <option value="Поставщик_категория">Поставщик_категория</option>  
     </select>   
 
-      <label for="del_id">ID удаляемой записи</label>
+      <label for="del_id">ID удаляемой записи</label> 
       <input id="del_id" type="text">
-      <button id="del_button" class="button">Удалить</button>
+      <button id="del_button">Удалить</button>
     </div>
   </div>
   

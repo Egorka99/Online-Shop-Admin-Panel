@@ -14,13 +14,15 @@
   	<div class="tabs-container">  
 	  <div class="tabs-content">   
 	    <div class="tabs-panel active" data-index="0">
-	     	<h2 style="display: inline;"><?php echo mysql_num_rows(mysql_query('select * from Заказ')); ?> Поставщика-(ов)</h2>     
-        <button class="button additionModalBtn" href="#"><img class="add-img" src="img/plus.png" alt="">Добавить поставщика</button>
-        <button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить поставщика</button>    
+	     <div class="tabs-info">
+           <h2 style="display: inline;"><?php echo mysql_num_rows(mysql_query('select * from Заказ')); ?> Поставщика-(ов)</h2>     
+                 <button class="button additionModalBtn" href="#"><img class="add-img" src="img/plus.png" alt="">Добавить поставщика</button>
+                 <button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить поставщика</button>
+       </div>
  
-<?php    
-   
-$ath = mysql_query("select * from Поставщик;");
+<?php     
+    
+$ath = mysql_query("select * from Поставщик;"); 
 if($ath)
 { 
   // Определяем таблицу и заголовок   
@@ -44,8 +46,8 @@ else
   exit();
 }  
 ?>    
-<h3>Поставщики по категориям</h3> 
-<?php   
+<div class="tabs-info"><h3>Поставщики по категориям</h3> </div>
+<?php    
    
 $ath = mysql_query("select * from Поставщик_категория;");
 if($ath)
@@ -99,7 +101,7 @@ else
             <option value="Банковские_карты">Банковские_карты</option>  
       <option value="Поставщик_категория">Поставщик_категория</option>  
       </select>    
-      <button id="add_button" class="button">Показать таблицу</button>
+      <button id="add_button">Показать таблицу</button>
       </div>  
     </div>
      
@@ -126,10 +128,10 @@ else
             <option value="Банковские_карты">Банковские_карты</option>  
       <option value="Поставщик_категория">Поставщик_категория</option>  
     </select>   
-
+ 
       <label for="del_id">ID удаляемой записи</label>
       <input id="del_id" type="text">
-      <button id="del_button" class="button">Удалить</button>
+      <button id="del_button">Удалить</button>
     </div>
   </div> 
   

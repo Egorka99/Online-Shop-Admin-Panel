@@ -42,20 +42,21 @@ if($ath)
 { 
   // Определяем таблицу и заголовок 
   echo "<table border=1>";
-  echo "<tr><td>ID товара</td><td>Название товара</td><td>Описание товара</td><td>Цена товара</td><td>ID Категории</td><td>ID Бренда</td></tr>"; 
+  echo "<tr><td>ID товара</td><td>Название товара</td><td>Описание товара</td><td>Цена товара</td><td>ID Категории</td><td>ID Бренда</td><td>ID Производителя</td></tr>"; 
   // Так как запрос возвращает несколько строк, применяем цикл
   while($product = mysql_fetch_array($ath))
   { 
     echo "<tr>   
     <td>".$product['id']."&nbsp;</td>   
     <td>".$product['Название_товара']."&nbsp </td> 
-    <td>".$product['Описание_товара']."&nbsp;</td>
+    <td>".$product['Описание_товара']."&nbsp;</td> 
     <td>".$product['Цена_товара']."&nbsp;</td>
     <td>".$product['ID_Категории']."&nbsp;</td> 
     <td>".$product['ID_Бренда']."&nbsp;</td>
+    <td>".$product['ID_Производителя']."&nbsp;</td>
     </tr>"; 
   }  
-  echo "</table>"; 
+  echo "</table>";  
 }
 else
 {
@@ -67,10 +68,10 @@ else
 	    <div class="tabs-panel" data-index="1">
 	      	<div class="tabs-info">
 	      		<h2 style="display: inline;"><?php echo mysql_num_rows(mysql_query('select * from Категория')); ?> Категории-(й)</h2>    
-	      			     	<button class="button additionModalBtn" href="#"><img class="add-img" src="img/plus.png" alt="">Добавить товар</button> 
-	      					<button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить товар</button> 
+	      			     	<button class="button additionModalBtn" href="#"><img class="add-img" src="img/plus.png" alt="">Добавить категорию</button> 
+	      					<button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить категорию</button> 
 	      	</div>
-	     	<?php
+	     	<?php 
 				$ath = mysql_query("select * from Категория;");
 				if($ath) 
 				{  
@@ -99,9 +100,9 @@ else
 	    <div class="tabs-panel" data-index="2">      	
 	     	<div class="tabs-info">
 	     		<h2 style="display: inline;"><?php echo mysql_num_rows(mysql_query('select * from Бренды')); ?> бренда-(ов)</h2>     
-	     		<button class="button additionModalBtn" href="#"><img class="add-img" src="img/plus.png" alt="">Добавить товар</button>
-	     		<button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить товар</button>    
-	     	</div> 
+	     		<button class="button additionModalBtn" href="#"><img class="add-img" src="img/plus.png" alt="">Добавить бренд</button>
+	     		<button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить бренд</button>    
+	     	</div>  
 	     	<?php       
 				$ath = mysql_query("select * from Бренды;");
 				if($ath)  
@@ -144,16 +145,16 @@ else
 				  // Так как запрос возвращает несколько строк, применяем цикл     
 				  while($product = mysql_fetch_array($ath)) 
 				  {    
-				  	$prod_count = mysql_num_rows(mysql_query("select * from Производитель Where id= ".$product['id']));  
+				  	$prod_count = mysql_num_rows(mysql_query("select * from Товар Where ID_Производителя= ".$product['id']));  
 				    echo "<tr>       
 				    <td>".$product['id']."&nbsp;</td>  
 				    <td>".$product['Название_производителя']."&nbsp </td> 
-				    <td>".$prod_count."&nbsp;</td>   
+				    <td>".$prod_count."&nbsp;</td>      
 				    </tr>";        
 				  }         
-				  echo "</table>";     
+				  echo "</table>";      
 				}
-				else 
+				else  
 				{
 				  echo "<p><b>Error: ".mysql_error()."</b><p>";
 				  exit();
@@ -187,9 +188,9 @@ else
             <option value="Банковские_карты">Банковские_карты</option>  
       <option value="Поставщик_категория">Поставщик_категория</option>  
 			</select>    
-			<button id="add_button" class="button">Показать таблицу</button>
+			<button id="add_button">Показать таблицу</button>
 	    </div>  
-	  </div>
+	  </div> 
 	   
 	</div>     
   <!-- Модальное окно удаления записи -->
@@ -217,14 +218,14 @@ else
 
      	<label for="del_id">ID удаляемой записи</label>
      	<input id="del_id" type="text">
-     	<button id="del_button" class="button">Удалить</button>
+     	<button id="del_button">Удалить</button>
     </div>
-  </div>
+  </div> 
   
 </div>  
 	 
 	<?php include 'close.php'; ?> 
-   
+    
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="scripts.js"></script>
 

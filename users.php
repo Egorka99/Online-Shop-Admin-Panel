@@ -13,11 +13,13 @@
   	<div class="tabs-container"> 
 	  <div class="tabs-content"> 
 	    <div class="tabs-panel active" data-index="0">
-	     	<h2 style="display: inline;"><?php echo mysql_num_rows(mysql_query('select * from Покупатель')); ?> Покупателя-(ей)</h2>    
-			<button class="button additionModalBtn" href="#"><img class="add-img" src="img/plus.png" alt="">Добавить товар</button>
-	     	<button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить товар</button>     
-  
-<?php     
+	     	<div class="tabs-info">
+	     		<h2 style="display: inline;"><?php echo mysql_num_rows(mysql_query('select * from Покупатель')); ?> Покупателя-(ей)</h2>    
+	     					<button class="button additionModalBtn" href="#"><img class="add-img" src="img/plus.png" alt="">Добавить покупателя</button>
+	     		<button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить покупателя</button>
+	     	</div>
+   
+<?php      
    
 $ath = mysql_query("select * from Покупатель;");  
 if($ath) 
@@ -47,11 +49,13 @@ else
 } 
 ?>    
 
-	     <h2 style="display: inline;">Банковские карты</h2>    
+	   <div class="tabs-info">
+	   	<h2 style="display: inline;">Банковские карты</h2>    
 		<button class="button additionModalBtn" href="#"><img class="add-img" src="img/plus.png" alt="">Добавить карту</button>
-     	<button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить карту</button>    
-
-<?php     
+     	<button class="button deleleModalBtn" href="#"><img class="add-img" src="img/delete.png" alt="">Удалить карту</button>
+	   </div>
+ 
+<?php      
    
 $ath = mysql_query("select * from Банковские_карты;"); 
 if($ath)  
@@ -107,7 +111,7 @@ else
       <option value="Банковские_карты">Банковские_карты</option>  
       <option value="Поставщик_категория">Поставщик_категория</option>  
 			</select>    
-			<button id="add_button" class="button">Показать таблицу</button>
+			<button id="add_button">Показать таблицу</button>
 	    </div>  
 	  </div>
 	   
@@ -133,11 +137,11 @@ else
       <option value="Поставщик">Поставщик</option>  
       <option value="Банковские_карты">Банковские_карты</option>  
       <option value="Поставщик_категория">Поставщик_категория</option>  
-		</select>   
+		</select>    
 
      	<label for="del_id">ID удаляемой записи</label>
      	<input id="del_id" type="text">
-     	<button id="del_button" class="button">Удалить</button>
+     	<button id="del_button">Удалить</button>
     </div>
   </div>
   
