@@ -8,7 +8,7 @@
 	$sql = mysql_query("Insert into ".$table." (".$titles.") values (".$values.");");  
    
 	if($sql) {                  
-		echo true;             
+		echo true;              
 	}          
 	else { 
 		echo false;     
